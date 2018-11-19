@@ -9,69 +9,44 @@ public class Customer implements Serializable {
 
     private static final long serialVersionUID = -2948084449274181330L;
     
-    public enum CustomerNeed {
-        SAVINGACCOUNT,
-        LIFEINSURANCE,
-        DIGITALBANKING,
-        STUDENTLOAN,
-        MORTGAGE
-    }
+    private List<String> customerNeeds = new ArrayList<String>();
 
-    private List<CustomerNeed> customerNeeds = new ArrayList<CustomerNeed>();
+    private String lifestage;
 
-    // https://www.peoples-ebank.com/lifestages.html
-    public enum CustomerLifeStage {
-        GETTINGSTARTED,
-        CAREERFOCUSED,
-        ADVICEFAMILY,
-        EMPTYNESTER,
-        GOLDENYEARS,
-        BUSINESS
-    }
-
-    private CustomerLifeStage lifestage;
-
-    public enum CustomerAssets {
-        TO50K,
-        FROM50KTO150K,
-        FROM150KTO300K,
-        OVER300K
-    }
-
-    private CustomerAssets assets;
+    private String assets;
 
 
     public Customer() {
     }
 
-    public void setLifeStage(CustomerLifeStage lifestage) {
+    public void setLifeStage(String lifestage) {
 
         this.lifestage = lifestage;
     }
 
-    public CustomerLifeStage getLifeStage() {
+    public String getLifeStage() {
 
         return lifestage;
     }
 
-    public List<CustomerNeed> getCustomerNeeds() {
+    public List<String> getCustomerNeeds() {
         return customerNeeds;
     }
 
-    public void setCustomerNeeds(List<CustomerNeed> customerNeeds) {
+    public void setCustomerNeeds(List<String> customerNeeds) {
         this.customerNeeds = customerNeeds;
     }
 
-    public void addNeed(CustomerNeed need) {
+    public void addNeed(String need) {
 
         customerNeeds.add(need);
     }
 
-    public void setAssets(CustomerAssets assets) {
+    public void setAssets(String assets) {
         this.assets = assets;
     }
 
-    public CustomerAssets getAssets() {
+    public String getAssets() {
         return assets;
     }
 
