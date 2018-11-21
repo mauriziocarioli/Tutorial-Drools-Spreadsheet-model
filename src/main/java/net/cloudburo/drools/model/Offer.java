@@ -10,7 +10,6 @@ public class Offer implements Serializable {
     private static final long serialVersionUID = -1107826986980812417L;
 
     private List<String> products = new ArrayList<String>();
-
      
     private String financialPackage;
 

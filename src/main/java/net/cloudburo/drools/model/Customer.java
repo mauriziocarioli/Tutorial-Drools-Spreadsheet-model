@@ -11,7 +11,7 @@ public class Customer implements Serializable {
     
     private List<String> customerNeeds = new ArrayList<String>();
 
-    private String lifestage;
+    private String lifeStage;
 
     private String assets;
 
@@ -19,14 +19,12 @@ public class Customer implements Serializable {
     public Customer() {
     }
 
-    public void setLifeStage(String lifestage) {
-
-        this.lifestage = lifestage;
+    public void setLifeStage(String lifeStage) {
+        this.lifeStage = lifeStage;
     }
 
     public String getLifeStage() {
-
-        return lifestage;
+        return lifeStage;
     }
 
     public List<String> getCustomerNeeds() {
